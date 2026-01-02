@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nicolás Martinez 3D</title>
+    <title>Nico Martinez 3D</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="./favicon.png">
 
     <style>
         body { margin: 0; background-color: #050505; color: white; font-family: 'Montserrat', sans-serif; overflow: hidden; }
@@ -46,7 +45,7 @@
         .slide.prev { opacity: 0; transform: scale(1.5) translateZ(200px); filter: blur(5px); }
         
         h1 { font-size: 5rem; text-transform: uppercase; margin: 0; text-shadow: 0 10px 40px rgba(0,0,0,0.8); }
-        p { font-size: 1.2rem; letter-spacing: 1px; margin-top: 10px; opacity: 0.8; }
+        p { font-size: 1.5rem; letter-spacing: 0.5px; margin-top: 5px; opacity: 0.8; }
 
         .corner-btn {
             position: fixed; z-index: 20; font-weight: 400; text-transform: uppercase;
@@ -61,21 +60,21 @@
 
         .modal-overlay {
             position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
-            background: rgba(0,0,0,0.85); backdrop-filter: blur(15px); z-index: 30;
+            background: rgba(0,0,0,0.25); backdrop-filter: blur(15px); z-index: 30;
             display: flex; justify-content: center; align-items: center;
             opacity: 0; pointer-events: none; transition: opacity 0.5s ease;
         }
         .modal-overlay.open { opacity: 1; pointer-events: all; }
         .modal-content {
-            width: 60%; max-width: 800px; background: rgba(255,255,255,0.05);
+            width: 60%; max-width: 800px; background: rgba(255, 255, 255, 0.075);
             border: 1px solid rgba(255,255,255,0.1); padding: 60px; border-radius: 20px;
-            text-align: left; transform: scale(0.9); transition: transform 0.5s cubic-bezier(0.2, 1, 0.3, 1);
+            text-align: center; transform: scale(0.9); transition: transform 0.5s cubic-bezier(0.2, 1, 0.3, 1);
         }
         .modal-overlay.open .modal-content { transform: scale(1); }
         .modal-close { position: absolute; top: 20px; right: 20px; font-size: 2rem; cursor: pointer; opacity: 0.5; }
         .modal-close:hover { opacity: 1; }
-        .modal-title { font-size: 3rem; margin-bottom: 20px; text-transform: uppercase; }
-        .modal-body { font-size: 1.1rem; line-height: 1.6; color: #ddd; }
+        .modal-title { font-size: 3.5rem; margin-bottom: 20px; text-transform: uppercase; }
+        .modal-body { font-size: 1.2rem; line-height: 1.6; color: #ddd; }
         .modal-body a { color: white; text-decoration: underline; }
 
         @media (max-width: 768px) { h1 { font-size: 3rem; } .modal-content { width: 90%; padding: 30px; } .corner-btn { padding: 20px; font-size: 0.7rem; } }
@@ -92,7 +91,7 @@
 
     <div class="corner-btn top-left" data-target="about">¿Quién soy?</div>
     <div class="corner-btn top-right" data-target="services">¿Qué hago?</div>
-    <div class="corner-btn bottom-left" data-target="works">Trabajos</div>
+    <div class="corner-btn bottom-left" data-target="works">Portfolio</div>
     <div class="corner-btn bottom-right" data-target="contact">Contacto</div>
 
     <div id="text-container">
@@ -266,8 +265,8 @@
 
         const modalData = {
             'about': { title: '¿Quién soy?', text: 'Soy un diseñador y desarrollador apasionado por crear experiencias inmersivas.' },
-            'services': { title: '¿Qué hago?', text: 'Sitios Web 3D<br>Animación y Modelado 3D<br>Diseño Gráfico' },
-            'works': { title: 'Portfolio', text: 'He colaborado muchas marcas para transformar sus identidades digitales.<br>Este es mi <a href="https://nicomartinez.myportfolio.com/" target="_blank" style="color:white;">Portfolio</a>' },
+            'services': { title: '¿Qué hago?', text: 'Desarrollo Web 3D<br>Animación y Modelado 3D<br>Diseño Gráfico' },
+            'works': { title: 'Mis Trabajos', text: 'He colaborado muchas marcas para transformar sus identidades digitales.<br>Este es mi <a href="https://nicolasmartinez.com.ar/" target="_blank" style="color:white;">Portfolio</a>' },
             'contact': { title: 'Contacto', text: 'Email: nico.a.marti@gmail.com<br>Teléfono: <a href="http://wa.me//+5492477364026" target="_blank" style="color:white;">+5492477364026</a><br>IG: <a href="https://www.instagram.com/nicomartinezdg/" target="_blank" style="color:white;">@nicomartinezdg</a>' }
         };
         const modalOverlay = document.querySelector('.modal-overlay');
@@ -336,4 +335,3 @@
     </script>
 </body>
 </html>
-
